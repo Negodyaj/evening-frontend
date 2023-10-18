@@ -1,3 +1,6 @@
+$secondary-font-color: #dec403;
+$main-font: "Space Grotesk", sans-serif;
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,7 +8,7 @@
 
 body,
 a {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: $main-font;
 }
 
 body {
@@ -15,8 +18,7 @@ body {
 .main-image {
   width: 100%;
   height: 866px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   position: absolute;
   z-index: -1;
 }
@@ -93,95 +95,112 @@ main {
   margin-top: 98px;
 }
 
-.main-content h1 {
-  font-size: 72px;
-  line-height: 98px;
-}
-.main-content h2 {
-  font-size: 28px;
-  line-height: 40px;
-  margin-top: 16px;
-  margin-bottom: 36px;
-}
-.main-content .movie-tags {
-  display: flex;
-  gap: 32px;
-  color: #b2b2b2;
-  font-size: 14px;
-  font-weight: 700;
-  line-height: 18px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-.main-content .movie-about {
-  width: 604px;
-  margin-top: 38px;
-  margin-bottom: 48px;
-  line-height: 26px;
-}
-.main-content .movie-about p:first-child {
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 28px;
-  margin-bottom: 16px;
-}
-.main-content .movie-about a {
-  font-weight: 700;
-  line-height: 26px;
-  color: white;
+.main-content {
+  h1 {
+    font-size: 72px;
+    line-height: 98px;
+  }
+
+  h2 {
+    font-size: 28px;
+    line-height: 40px;
+    margin-top: 16px;
+    margin-bottom: 36px;
+  }
+
+  .movie-tags {
+    display: flex;
+    gap: 32px;
+    color: #b2b2b2;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .movie-about {
+    width: 604px;
+    margin-top: 38px;
+    margin-bottom: 48px;
+    line-height: 26px;
+
+    p:first-child {
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 28px;
+      margin-bottom: 16px;
+    }
+
+    a {
+      font-weight: 700;
+      line-height: 26px;
+      color: white;
+    }
+  }
 }
 
 .movie-cards {
   margin-top: 55px;
-}
-.movie-cards .movie-card {
-  width: 392px;
-  height: 200px;
-  border-radius: 8px;
-  border: 1px solid #383838;
-  display: flex;
-  overflow: hidden;
-}
-.movie-cards .card-content {
-  padding: 16px;
-}
-.movie-cards .movie-details {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-}
-.movie-cards .movie-tags {
-  color: #929292;
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 16px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-.movie-cards .title {
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 28px;
-}
-.movie-cards .rating {
-  font-size: 14px;
-  line-height: 20px;
-  display: flex;
-  gap: 4px;
-}
-.movie-cards .rating span {
-  color: #fdff00;
-  font-weight: 700;
-}
-.movie-cards .description {
-  color: #dec403;
-  font-size: 12px;
-  line-height: 16px;
-}
-.movie-cards .movie-links {
-  display: flex;
-  gap: 12px;
-  margin-top: 12px;
+
+
+  .movie-card {
+    width: 392px;
+    height: 200px;
+    border-radius: 8px;
+    border: 1px solid #383838;
+    display: flex;
+    overflow: hidden;
+  }
+
+  .card-content {
+    padding: 16px;
+  }
+
+  .movie-details {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .movie-tags {
+    color: #929292;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  .title {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+  }
+
+  .rating {
+    font-size: 14px;
+    line-height: 20px;
+    display: flex;
+    gap: 4px;
+  }
+
+  .rating span {
+    color: #fdff00;
+    font-weight: 700;
+  }
+
+  .description {
+    color: $secondary-font-color;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .movie-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+  }
 }
 
 footer .container {
@@ -192,7 +211,7 @@ footer .container {
   display: flex;
   align-items: center;
   gap: 12px;
-  color: #dec403;
+  color: $secondary-font-color;
   font-size: 10px;
   line-height: 12px;
 }
@@ -214,6 +233,7 @@ footer .container {
 }
 
 /* END OF WARNING */
+
 .icon-link {
   display: flex;
   position: relative;
@@ -239,4 +259,4 @@ footer .container {
 
 .icon-link:hover path {
   fill: #fdff00;
-}/*# sourceMappingURL=main.css.map */
+}
