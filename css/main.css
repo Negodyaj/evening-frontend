@@ -214,3 +214,43 @@ footer .container {
   display: flex;
   gap: 32px;
 }
+
+/* PLEASE DON'T USE IT!!!  */
+.twitter {
+  background-image: url(../images/twitter.svg);
+  width: 24px;
+  height: 24px;
+}
+
+.twitter:hover {
+  background-image: url(../images/twitter-yellow.svg);
+}
+
+/* END OF WARNING */
+
+.icon-link {
+  display: flex;
+  position: relative;
+}
+
+.icon-link:hover::before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #fdff00;
+  position: absolute;
+  bottom: -14px;
+}
+
+.icon-link path {
+  transition: all 0.3s ease;
+}
+
+.icon-link:hover {
+  border-color: #fdff00;
+}
+
+.icon-link:hover path {
+  fill: #fdff00;
+}
