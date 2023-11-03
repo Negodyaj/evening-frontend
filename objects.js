@@ -96,6 +96,7 @@ const cardWidth = firstMovieCard.offsetWidth;
 const gap = 32;
 let currentLeftMargin = 0;
 let counter = 0;
+const maxCounterValue = document.body.clientWidth <= 850 ? 4 : 2;
 
 function handleLeftButtonClick() {
   if (currentLeftMargin === 0) return;
@@ -107,7 +108,7 @@ function handleLeftButtonClick() {
 }
 
 function handleRightButtonClick() {
-  if (counter === 2) return;
+  if (counter === maxCounterValue) return;
 
   currentLeftMargin -= (cardWidth + gap);
   counter++;

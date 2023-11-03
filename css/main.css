@@ -338,10 +338,6 @@ footer .container {
   .main-content .movie-about a {
     line-height: 22px;
   }
-  .movie-cards {
-    flex-direction: column;
-    gap: 25px;
-  }
   .movie-cards .movie-card {
     width: 100%;
     height: unset;
