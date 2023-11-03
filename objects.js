@@ -25,7 +25,25 @@ const movies = [
     detailsUrl: 'url2',
     imageSrc: './images/movie3.png',
     tags: ['action', 'adventure',]
-  }
+  },
+  {
+    name: 'Batman Begins 2',
+    imdb: 8.2,
+    description: `Batman Begins explores the origins of the Batman legend and the Dark Knight's emergence as a force...`,
+    watchUrl: 'url1',
+    detailsUrl: 'url2',
+    imageSrc: './images/movie1.png',
+    tags: ['action', 'adventure'],
+  },
+  {
+    name: 'The Dark Knight 2',
+    imdb: 9.0,
+    description: `Christian Bale and director Christopher Nolan reunite following their blockbuster success with...`,
+    watchUrl: 'url1',
+    detailsUrl: 'url2',
+    imageSrc: './images/movie2.png',
+    tags: ['action', 'crime', 'drama',]
+  },
 ];
 
 // DOM - document object model
@@ -59,6 +77,40 @@ for (const movie of movies) {
 }
 
 const nav = document.querySelector('header nav');
-nav.classList.toggle('opened');
 
-setTimeout(() => nav.classList.toggle('opened'), 3000);
+function handleBurgerButtonClick(event) {
+  nav.classList.add('opened');
+  event.stopPropagation();
+  console.log('button');
+}
+
+function handleBodyClick() {
+  if (nav.classList.contains('opened')) {
+    nav.classList.remove('opened');
+    console.log('body');
+  }
+}
+
+const firstMovieCard = moviesContainer.children[0];
+const cardWidth = firstMovieCard.offsetWidth;
+const gap = 32;
+let currentLeftMargin = 0;
+let counter = 0;
+
+function handleLeftButtonClick() {
+  if (currentLeftMargin === 0) return;
+
+  currentLeftMargin += (cardWidth + gap);
+  counter--;
+  firstMovieCard.style.marginLeft = `${currentLeftMargin}px`;
+  console.log('left');
+}
+
+function handleRightButtonClick() {
+  if (counter === 2) return;
+
+  currentLeftMargin -= (cardWidth + gap);
+  counter++;
+  firstMovieCard.style.marginLeft = `${currentLeftMargin}px`;
+  console.log('right');
+}

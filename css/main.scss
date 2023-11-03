@@ -140,9 +140,30 @@ main {
   }
 }
 
+.carousel {
+  position: relative;
+
+  &-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 50px;
+
+    &.left {
+      left: -20px;
+    }
+
+    &.right {
+      right: -20px;
+    }
+  }
+}
+
 .movie-cards {
   margin-top: 55px;
-
+  display: flex;
+  gap: 32px;
+  overflow: hidden;
 
   .movie-card {
     width: 392px;
@@ -151,6 +172,8 @@ main {
     border: 1px solid #383838;
     display: flex;
     overflow: hidden;
+    flex-shrink: 0;
+    transition: margin-left .5s ease;
   }
 
   .card-content {

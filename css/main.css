@@ -131,8 +131,27 @@ main {
   color: white;
 }
 
+.carousel {
+  position: relative;
+}
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 50px;
+}
+.carousel-btn.left {
+  left: -20px;
+}
+.carousel-btn.right {
+  right: -20px;
+}
+
 .movie-cards {
   margin-top: 55px;
+  display: flex;
+  gap: 32px;
+  overflow: hidden;
 }
 .movie-cards .movie-card {
   width: 392px;
@@ -141,6 +160,8 @@ main {
   border: 1px solid #383838;
   display: flex;
   overflow: hidden;
+  flex-shrink: 0;
+  transition: margin-left 0.5s ease;
 }
 .movie-cards .card-content {
   padding: 16px;
